@@ -1,17 +1,10 @@
-# The Meteor Chef - Base
-A starting point for Meteor apps.
+# NAU CS 477 - Oh, Beer!
 
-<table>
-  <tbody>
-    <tr>
-      <th>Base Version</th>
-      <td>v3.4.0</td>
-    </tr>
-    <tr>
-      <th>Meteor Version</th>
-      <td>v1.2.1</td>
-    </tr>
-  </tbody>
-</table>
+[ohbeer.me](http://ohbeer.me)
 
-[Read the Documentation](http://themeteorchef.com/base)
+The Desktop half of the Thirstbuster project for NAU's Advanced User Inferfaces course. 
+
+## Team Members
+- [Brandon Paree](https://github.com/brandonparee)
+- [Josh Frampton](https://github.com/jrf254)
+- [Dylan Grayson](https://github.com/DylanGrayson) 
