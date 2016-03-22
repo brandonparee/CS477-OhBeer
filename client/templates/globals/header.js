@@ -1,6 +1,6 @@
 Template.header.helpers({
   brandLink() {
-    let login = FlowRouter.path( 'login' ),
+    let login = FlowRouter.path( 'splash' ),
         index = FlowRouter.path( 'index' );
     return !Meteor.loggingIn() && !Meteor.userId() ? login : index;
   }
@@ -16,10 +16,4 @@ Template.header.events({
       }
     });
   }
-});
-
-Template.header.onRendered( () => {
-  $(".dropdown-button").dropdown({
-    beloworigin: true
-  });
 });
