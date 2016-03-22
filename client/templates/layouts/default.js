@@ -18,13 +18,14 @@ Template.default.helpers({
 			'login',
 			'signup',
 			'recover-password',
-			'reset-password'
+			'reset-password',
+			'splash'
 		], '/' );
 	},
 	redirectPublic() {
 		return handleRedirect([
 			'index',
 			'dashboard'
-		], '/login' );
+		], '/splash' );
 	}
 });

@@ -2,6 +2,13 @@ const publicRoutes = FlowRouter.group({
   name: 'public'
 });
 
+publicRoutes.route( '/splash', {
+  name: 'splash',
+  action() {
+    BlazeLayout.render( 'default', { yield: 'splash' } );
+  }
+});
+
 publicRoutes.route( '/signup', {
   name: 'signup',
   action() {
