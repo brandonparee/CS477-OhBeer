@@ -1,15 +1,17 @@
 <template name="header">
-  <ul id="authenticatedDropdown" class="dropdown-content">
-    <li class="logout"><a href="#">Logout</a></li>
-  </ul>
-	<nav class="orange">
-		<div class="nav-wrapper container">
-			<a class="brand-logo" href="{{brandLink}}">Oh, Beer!</a>
-			{{#if currentUser}}
-				{{> authenticatedNavigation}}
-      {{else}}
-      	{{> publicNavigation}}
-      {{/if}}
-		</div>
-	</nav>
+    <ul id="authenticatedDropdown" class="dropdown-content">
+        <li class="logout"><a href="#">Logout</a></li>
+    </ul>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper container">
+                <a class="brand-logo" href="{{brandLink}}">Oh, Beer!</a> 
+                {{#if currentUser}} 
+                	{{> authenticatedNavigation}} 
+                {{else}} 
+                	{{> publicNavigation}} 
+            	{{/if}}
+            </div>
+        </nav>
+    </div>
 </template>

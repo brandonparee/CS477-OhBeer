@@ -2,6 +2,6 @@
   <ul class="right hide-on-med-and-down">
     <li class="{{currentRoute 'index'}}"><a href="{{pathFor 'index'}}">Index</a></li>
     <li class="{{currentRoute 'dashboard'}}"><a href="{{pathFor 'dashboard'}}">Dashboard</a></li>
-    <li><a class="dropdown-button" href="#!" data-activates="authenticatedDropdown">{{currentUser.emails.[0].address}}</a></li>
+    <li><a class="dropdown-button" href="#" data-beloworigin="true" data-activates="authenticatedDropdown">{{currentUser.emails.[0].address}}<i class="material-icons right">arrow_drop_down</i></a></li>
   </ul>
 </template>

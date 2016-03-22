@@ -3,3 +3,12 @@
 @import "objects/forms";
 
 @import "components/login";
+
+@import "{poetic:materialize-scss}/sass/components/_color.scss";
+//Change Color Examples
+// http://materializecss.com/sass.html
+$primary-color: color("deep-orange", "base") !default;
+$secondary-color: color("deep-orange", "lighten-1") !default;
+//$link-color: color("red", "darken-1") !default;
+
+@import "{poetic:materialize-scss}/sass/materialize.scss";

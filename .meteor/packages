@@ -33,4 +33,6 @@ reactive-var
 reactive-dict
 aldeed:collection2
 tracker
-materialize:materialize
+poetic:materialize-scss
+gildaspk:autoform-materialize
+meteorstuff:materialize-modal

@@ -17,3 +17,9 @@ Template.header.events({
     });
   }
 });
+
+Template.header.onRendered( () => {
+  $(".dropdown-button").dropdown({
+    beloworigin: true
+  });
+});
