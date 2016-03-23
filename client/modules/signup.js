@@ -1,12 +1,21 @@
-let signup = ( options ) => {
-  _validate( options.form, options.template );
+let template;
+
+let _handleSignup = () => {
+  let user = {
+    email: template.find( '[name="emailAddress"]' ).value,
+    password: template.find( '[name="password"]' ).value
+  };
+
+  Accounts.createUser( user, ( error ) => {
+    if ( error ) {
+      Bert.alert( error.reason, 'danger' );
+    } else {
+      Bert.alert( 'Welcome!', 'success' );
+    }
+  });
 };
 
-let _validate = ( form, template ) => {
-  $( form ).validate( validation( template ) );
-};
-
-let validation = ( template ) => {
+let validation = () => {
   return {
     rules: {
       emailAddress: {
@@ -28,23 +37,15 @@ let validation = ( template ) => {
         minlength: 'Use at least six characters, please.'
       }
     },
-    submitHandler() { _handleSignup( template ); }
+    submitHandler() { _handleSignup(); }
   };
 };
 
-let _handleSignup = ( template ) => {
-  let user = {
-    email: template.find( '[name="emailAddress"]' ).value,
-    password: template.find( '[name="password"]' ).value
-  };
-
-  Accounts.createUser( user, ( error ) => {
-    if ( error ) {
-      Bert.alert( error.reason, 'danger' );
-    } else {
-      Bert.alert( 'Welcome!', 'success' );
-    }
-  });
+let _validate = ( form ) => {
+  $( form ).validate( validation() );
 };
 
-Modules.client.signup = signup;
+export default function( options ) {
+  template = options.template;
+  _validate( options.form );
+}

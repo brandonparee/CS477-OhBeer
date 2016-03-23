@@ -1,1 +1,3 @@
-Meteor.startup( () => Modules.both.startup() );
+Meteor.startup( () => {
+  // Code to run on client *and* server startup.  
+});

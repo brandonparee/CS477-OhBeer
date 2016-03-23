@@ -1,8 +1,7 @@
+import resetPassword from '../../modules/reset-password';
+
 Template.resetPassword.onRendered( () => {
-  Modules.client.resetPassword({
-    form: "#reset-password",
-    template: Template.instance()
-  });
+  resetPassword( { form: '#reset-password', template: Template.instance() } );
 });
 
 Template.resetPassword.events({

@@ -1,6 +1,4 @@
-const authenticatedRoutes = FlowRouter.group({
-  name: 'authenticated'
-});
+const authenticatedRoutes = FlowRouter.group( { name: 'authenticated' } );
 
 authenticatedRoutes.route( '/', {
   name: 'index',

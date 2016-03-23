@@ -1,8 +1,10 @@
-@import "tools/extends";
+@import "extends";
 
-@import "objects/forms";
+@import "base/animations";
+@import "base/forms";
 
-@import "components/login";
+@import "module/loading";
+@import "module/login";
 
 @import "{poetic:materialize-scss}/sass/components/_color.scss";
 //Change Color Examples
