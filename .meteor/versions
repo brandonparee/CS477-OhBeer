@@ -53,6 +53,7 @@ jquery@1.11.5-beta.12
 kadira:blaze-layout@2.3.0
 kadira:flow-router@2.10.0
 lai:collection-extensions@0.1.4
+less@2.5.2-beta.12
 livedata@1.0.15
 localstorage@1.0.6-beta.12
 logging@1.0.9-beta.12
