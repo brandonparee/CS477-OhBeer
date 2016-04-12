@@ -1,12 +1,12 @@
 <template name="header">
     <div class="navbar-fixed">
         <nav class="">
-            <div class="nav-wrapper container">
-                <a class="brand-logo" href="{{brandLink}}">Oh, Beer!</a> 
-                {{#if currentUser}} 
-                	{{> authenticatedNavigation}} 
-                {{else}} 
-                	{{> publicNavigation}} 
+            <div class="nav-wrapper">
+                <a class="brand-logo center" href="{{brandLink}}">Oh, Beer!</a> 
+                {{#if currentUser}}
+                	{{> authenticatedNavigation}}
+                {{else}}
+                	{{> publicNavigation}}
             	{{/if}}
             </div>
         </nav>

@@ -1,10 +1,10 @@
 <template name="authenticatedNavigation">
 	<ul id="authenticatedDropdown" class="dropdown-content">
-  	<li class="logout"><a href="#">Logout</a></li>
+  	<li class="logout"><a>Logout</a></li>
   </ul>
   <ul class="right hide-on-med-and-down">
     <li class="{{currentRoute 'index'}}"><a href="{{pathFor 'index'}}">Index</a></li>
     <li class="{{currentRoute 'dashboard'}}"><a href="{{pathFor 'dashboard'}}">Dashboard</a></li>
-    <li><a class="dropdown-button" href="#!" data-beloworigin="true" data-activates="authenticatedDropdown">{{currentUser.emails.[0].address}}<i class="material-icons right">arrow_drop_down</i></a></li>
+    <li><a class="dropdown-button" data-beloworigin="true" data-activates="authenticatedDropdown">{{currentUser.emails.[0].address}}<i class="material-icons right">arrow_drop_down</i></a></li>
   </ul>
 </template>
