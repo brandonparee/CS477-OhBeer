@@ -2,6 +2,12 @@ SimpleSchema.debug = true
 
 Bars = new Meteor.Collection( 'bars' );
 
+Bars.allow({
+  insert: () => true,
+  update: () => true,
+  remove: () => true
+});
+
 let BarsSchema = new SimpleSchema({
   "name": {
     type: String
@@ -17,7 +23,8 @@ let BarsSchema = new SimpleSchema({
     type: String
   },
   "menu": {
-    type: [String]
+    type: [String],
+    optional: true
   }
 });
 

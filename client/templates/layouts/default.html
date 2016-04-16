@@ -8,7 +8,15 @@
 		{{else}}
 			{{#if authenticated}}
 				{{#unless redirectAuthenticated}}
-					{{> Template.dynamic template=yield}}
+					{{#if needsBar}}
+							{{> createBar}}
+					{{else}}
+						{{#if Template.subscriptionsReady}}
+							{{> Template.dynamic template=yield}}
+						{{else}}
+							{{> loading}}
+						{{/if}}
+					{{/if}}
 				{{/unless}}
 			{{else}}
 				{{#unless redirectPublic}}

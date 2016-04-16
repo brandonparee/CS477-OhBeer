@@ -20,3 +20,10 @@ authenticatedRoutes.route( '/settings', {
     BlazeLayout.render( 'default', { yield: 'settings' } );
   }
 });
+
+authenticatedRoutes.route( '/create-bar', {
+  name: 'createBar',
+  action() {
+    BlazeLayout.render( 'default', { yield: 'createBar' } );
+  }
+});
