@@ -30,7 +30,8 @@ Template.default.helpers({
 	redirectPublic() {
 		return handleRedirect([
 			'index',
-			'dashboard'
+			'dashboard',
+			'settings'
 		], '/splash' );
 	},
 	needsBar() {
