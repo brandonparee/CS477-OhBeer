@@ -8,14 +8,14 @@
 		{{else}}
 			{{#if authenticated}}
 				{{#unless redirectAuthenticated}}
-					{{#if needsBar}}
-							{{> createBar}}
-					{{else}}
-						{{#if Template.subscriptionsReady}}
-							{{> Template.dynamic template=yield}}
+					{{#if Template.subscriptionsReady}}
+						{{#if needsBar}}
+								{{> createBar}}
 						{{else}}
-							{{> loading}}
+								{{> Template.dynamic template=yield}}
 						{{/if}}
+					{{else}}
+						{{> loading}}
 					{{/if}}
 				{{/unless}}
 			{{else}}

@@ -35,7 +35,10 @@ Template.default.helpers({
 		], '/splash' );
 	},
 	needsBar() {
-		return (Bars.find().count() > 0)
+		if (Bars.find().count() > 0) {
+			return false
+		}
+		return true
 	}
 });
 
