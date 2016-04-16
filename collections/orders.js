@@ -27,7 +27,7 @@ let OrderSchema = new SimpleSchema({
   },
   "barId": {
     type: String
-  }
+  },
   "items": {
     type: [OrderItem]
   },
