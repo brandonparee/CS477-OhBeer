@@ -1,5 +1,5 @@
-Meteor.publish( 'index', function() {
-  return Documents.find();
+Meteor.publish( 'menuItems', function() {
+  return MenuItems.find()
 });
 
 Meteor.publish( 'myBar', () => {

@@ -13,6 +13,9 @@ MenuItems.deny({
 });
 
 let MenuItemSchema = new SimpleSchema({
+  "barId": {
+    type: String
+  }
   "name": {
     type: String
   },

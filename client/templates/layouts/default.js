@@ -31,6 +31,5 @@ Template.default.helpers({
 });
 
 Template.default.onCreated(() => {
-	remote.subscribe('index')
 	console.log(RemoteDocuments.find().fetch())
 })
