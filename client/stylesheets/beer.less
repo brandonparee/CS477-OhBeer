@@ -1,0 +1,129 @@
+.opacity(
+	@opacity:0.5
+	){
+	opacity: @opacity;
+	-webkit-opacity: @opacity;
+	-moz-opacity: @opacity;
+}
+.transform(
+	@string
+	){
+	-webkit-transform: @string;
+	-moz-transform: @string;
+	-ms-transform: @string;
+	-o-transform: @string;
+}
+.square(@l){
+	width: @l;
+	height: @l;
+}
+.animation(
+	@name
+	){
+	-webkit-animation: @name;
+	-moz-animation: @name;
+	animation: @name;
+	-ms-animation: @name;
+}
+.keyframes(
+	@name;
+	@arguments
+	){
+	@-moz-keyframes @name{    
+		@arguments();
+	}
+	@-webkit-keyframes @name{
+		@arguments();
+	}
+	@keyframes @name{
+		@arguments();
+	}
+}
+body{
+	font-family: 'Lato', sans-serif;
+}
+
+
+	#beer1{
+		height: 50vh;
+		background-color: #F7BD01;
+		font-weight: 900;
+		position: relative;
+		>div{
+			font-size: 96/16em;
+			color: transparent;
+			
+			text-align: center;
+			position: absolute;
+			top: 50%;
+			width: 100%;
+			.transform(translate(0,-50%));
+			-webkit-background-clip: text;
+			background-clip: text;
+			background-image:url('http://c-araujo.com/nnk2Gsg.png');
+			background-position: 0 0;
+			.animation(serveja 1s linear infinite);
+			.keyframes(serveja, {
+				to{
+					background-position: 1051px 0;
+				}
+				});
+		}
+		
+	}
+	#beer2{
+		height: 50vh;
+		background-color: #fff;
+		font-weight: 900;
+		position: relative;
+		>div{
+			width: 140px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			.transform(translate(-50%, -50%));
+			background-image:url('http://c-araujo.com/zQjJ7lI.png');
+			background-repeat: repeat-x;
+			background-color:  #F7BD01;
+			.animation(serveja 10s linear infinite);
+			
+			>div{
+				position: relative;
+				z-index: 400000;
+				width: 100%;
+				padding-bottom: 100%;
+				background-image:url('http://c-araujo.com/bnQiCZs.png');
+
+			}
+			.bolha{
+				border-radius: 100%;
+				display: block;
+				z-index: 2;
+				.bolha(@index) when (@index > 0) {
+					@r1: `Math.random()`;
+					@r2: `Math.random()`;
+					@r3: `Math.random()`;
+					&:nth-child(@{index}){
+						background-color: rgba(255, 255, 255, @r2 * 0.8 + 0.1);
+						.square( @r3 * 4 + 2px );
+						position: absolute;
+						left: @r1 * 41.4285714 + 17.8571429%;
+						bottom: 0;
+						.animation(bolha @r3 * 0.8 + 1s infinite linear);
+					}
+					.bolha(@index - 1);
+				}
+				.bolha(0) {}
+				.bolha(40);
+				.keyframes(bolha, {
+					to{
+						bottom: 100%;
+						.opacity(0);
+					}
+				});
+
+			}
+		}
+	}
+
+

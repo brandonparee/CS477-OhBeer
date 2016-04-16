@@ -9,13 +9,13 @@ jquery
 check
 audit-argument-checks
 themeteorchef:jquery-validation
-browser-policy
+#browser-policy
 
 
 themeteorchef:bert
 meteorhacks:ssr
 
-
+less
 ecmascript
 kadira:flow-router
 kadira:blaze-layout
