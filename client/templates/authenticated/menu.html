@@ -2,13 +2,15 @@
   <div class="white z-depth-1">
     <div class="container" style="padding:10px;">
       <h5>Add New Menu Item</h5>
-      {{> quickForm collection="MenuItems" id="insertPostForm" type="insert"}}
+      {{> quickForm collection="MenuItems" id="insertMenuForm" type="insert" omitFields="barId"}}
     </div>
   </div>
   <div class="white z-depth-1">
     <div class="container" style="padding:10px;">
       <h5>Current Menu</h5>
-      Some shit
+      {{#each allMenuItems}}
+        {{name}}
+      {{/each}}
     </div>
   </div>
 </template>
