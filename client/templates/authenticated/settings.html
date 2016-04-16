@@ -24,11 +24,10 @@
 
 <template name="barProfile">
   <div class="white z-depth-1">
-    <div class="container" style="padding-top: 15px">
-      {{> quickForm collection="Bars" type="update" omitFields="owner,menu" id="updateBarForm"}}
+    <div class="container" style="padding: 15px">
+        {{> quickForm collection="Bars" type="update" omitFields="owner,menu" id="barForm"}}
     </div>
   </div>
 </template>
 
-<template name="isRendered">
-</template>
+<template name="isRendered"></template>

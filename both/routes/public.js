@@ -2,6 +2,13 @@ const publicRoutes = FlowRouter.group({
   name: 'public'
 });
 
+publicRoutes.route( '/', {
+  name: 'index',
+  action() {
+    FlowRouter.go('splash');
+  }
+});
+
 publicRoutes.route( '/splash', {
   name: 'splash',
   action() {
