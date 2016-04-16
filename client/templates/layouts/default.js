@@ -36,5 +36,5 @@ Template.default.helpers({
 });
 
 Template.default.onCreated(() => {
-	console.log(RemoteDocuments.find().fetch())
+
 })

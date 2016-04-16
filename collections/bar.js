@@ -1,3 +1,5 @@
+SimpleSchema.debug = true
+
 Bars = new Meteor.Collection( 'bars' );
 
 let BarsSchema = new SimpleSchema({
