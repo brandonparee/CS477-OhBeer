@@ -18,3 +18,5 @@ let BarsSchema = new SimpleSchema({
     type: [String]
   }
 });
+
+Bars.attachSchema(BarsSchema)
