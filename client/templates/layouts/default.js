@@ -7,6 +7,11 @@ const handleRedirect = ( routes, redirect ) => {
 };
 
 Template.default.helpers({
+	mobileCheck() {
+		if (Meteor.isCordova){
+			FlowRouter.go('splashMobile')
+		}
+	},
 	loggingIn() {
 		return Meteor.loggingIn();
 	},
@@ -31,5 +36,5 @@ Template.default.helpers({
 });
 
 Template.default.onCreated(() => {
-	console.log(RemoteDocuments.find().fetch())
+
 })

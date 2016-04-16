@@ -1,7 +1,7 @@
 accounts-base@1.2.5
 accounts-password@1.1.7
 alanning:roles@1.2.15
-aldeed:autoform@5.1.2
+aldeed:autoform@5.8.1
 aldeed:collection2@2.9.1
 aldeed:collection2-core@1.1.1
 aldeed:schema-deny@1.0.1
@@ -40,7 +40,6 @@ email@1.0.11
 fortawesome:fontawesome@4.4.0_1
 fourseven:scss@3.4.3
 geojson-utils@1.0.7
-gildaspk:autoform-materialize@0.0.26
 gwendall:body-events@0.1.6
 hot-code-push@1.0.3
 html-tools@1.0.8

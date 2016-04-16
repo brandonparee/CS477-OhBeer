@@ -40,5 +40,6 @@ standard-minifier-js
 meteortoys:allthings
 
 poetic:materialize-scss
-gildaspk:autoform-materialize
+#gildaspk:autoform-materialize
 meteorstuff:materialize-modal
+aldeed:autoform
