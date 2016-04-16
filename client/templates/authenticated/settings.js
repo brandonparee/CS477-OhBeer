@@ -8,3 +8,7 @@ Template.barProfile.helpers({
     return Bars.findOne()
   }
 })
+
+Template.settings.onCreated( () => {
+  	  Template.instance().subscribe( 'myBar' )
+})

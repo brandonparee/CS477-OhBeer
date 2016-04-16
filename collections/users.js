@@ -11,11 +11,11 @@ Meteor.users.allow({
 // });
 
 User = new SimpleSchema({
-	// username: {
-	// 	type: String,
-	// 	regEx: /[a-z0-9A-Z_.]{3,20}/,
-	// 	optional: true
-	// },
+	username: {
+		type: String,
+		regEx: /[a-z0-9A-Z_.]{3,20}/,
+		optional: true
+	},
 	emails: {
 		type: [Object],
 		optional: true

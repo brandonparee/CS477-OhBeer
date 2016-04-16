@@ -3,7 +3,16 @@ Meteor.publish( 'menuItems', function() {
 });
 
 Meteor.publish( 'myBar', function() {
-  return Bars.find({_id: Meteor.users.findOne(this.userId).bar})
+  let bar = Meteor.users.findOne(this.userId).bar
+  if (bar)
+    return Bars.find({_id: bar})
+  else {
+    return []
+  }
+})
+
+Meteor.publish('aBar', function(barId) {
+  return Bars.find({_id: barId})
 })
 
 Meteor.publish( 'myMenu', function(barId) {
@@ -13,5 +22,5 @@ Meteor.publish( 'myMenu', function(barId) {
 })
 
 Meteor.publish( 'me', function() {
-  return Meteor.users.find(this.userId)
+  return Meteor.users.find({_id: this.userId}, {services: 0})
 })

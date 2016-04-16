@@ -35,7 +35,7 @@ Template.default.helpers({
 		], '/splash' );
 	},
 	needsBar() {
-		if (Bars.find().count() > 0) {
+		if (Meteor.user().bar) {
 			return false
 		}
 		return true
@@ -44,7 +44,6 @@ Template.default.helpers({
 
 Template.default.onCreated(() => {
 		Template.instance().subscribe( 'me' )
-	  Template.instance().subscribe( 'myBar' )
 })
 
 AutoForm.hooks({
@@ -57,10 +56,15 @@ AutoForm.hooks({
 			},
       after: {
 				insert: (error, result) => {
-					console.log(error, result)
-					Meteor.user().bar = result
         	Meteor.users.update(Meteor.userId(), {$set: {bar: result}})
-      }
-    }
+	      }
+	    },
+			onSuccess: (formType, result) => {
+				if (formType == "insert") {
+					Bert.alert("Bar Created Successfully", 'success')
+				}else if (formType == "update"){
+					Bert.alert("Bar Modified Successfully", 'success')
+				}
+		}
 	}
 })
