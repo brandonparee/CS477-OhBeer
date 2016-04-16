@@ -1,5 +1,11 @@
 Bars = new Meteor.Collection( 'bars' );
 
+Bars.allow({
+  insert: () => true,
+  update: () => true,
+  remove: () => true
+});
+
 let BarsSchema = new SimpleSchema({
   "name": {
     type: String
