@@ -9,8 +9,8 @@
 @import "{poetic:materialize-scss}/sass/components/_color.scss";
 //Change Color Examples
 // http://materializecss.com/sass.html
-$primary-color: color("deep-orange", "base") !default;
-$secondary-color: color("deep-orange", "lighten-1") !default;
+$primary-color: color("deep-purple", "base") !default;
+$secondary-color: color("deep-purple", "lighten-1") !default;
 //$link-color: color("red", "darken-1") !default;
 
 @import "{poetic:materialize-scss}/sass/materialize.scss";
@@ -34,8 +34,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fe8039', end
 background: #000000; /* fallback for old browsers */
 background: -webkit-linear-gradient(top, #000000 , #434343); /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(top, #000000 , #434343); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        
-        
+
+
 }
 
 #beer {
