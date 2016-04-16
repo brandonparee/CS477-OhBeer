@@ -15,6 +15,10 @@ $secondary-color: color("deep-purple", "lighten-1") !default;
 
 @import "{poetic:materialize-scss}/sass/materialize.scss";
 
+body{
+	background-color: #ECF0F1;
+}
+
 .header-gradient{
 
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fe8039+0,fbb40c+35,fcd00f+100 */
