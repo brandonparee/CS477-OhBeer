@@ -3,9 +3,9 @@ Meteor.publish( 'menuItems', function() {
 });
 
 Meteor.publish( 'myBar', function() {
-  let bar = Meteor.users.findOne(this.userId).bar
-  if (bar)
-    return Bars.find({_id: bar})
+  let usr = Meteor.users.findOne(this.userId)
+  if (usr.bar)
+    return Bars.find({_id: usr.bar})
   else {
     return []
   }
