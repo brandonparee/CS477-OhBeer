@@ -25,7 +25,9 @@
 <template name="barProfile">
   <div class="white z-depth-1">
     <div class="container" style="padding: 15px">
+      {{#with bar}}
         {{> quickForm collection="Bars" type="update" omitFields="owner,menu" id="barForm"}}
+      {{/with}}
     </div>
   </div>
 </template>

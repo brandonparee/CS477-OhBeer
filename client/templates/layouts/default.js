@@ -43,6 +43,7 @@ Template.default.helpers({
 });
 
 Template.default.onCreated(() => {
+		Template.instance().subscribe( 'me' )
 	  Template.instance().subscribe( 'myBar' )
 })
 
@@ -57,6 +58,7 @@ AutoForm.hooks({
       after: {
 				insert: (error, result) => {
 					console.log(error, result)
+					Meteor.user().bar = result
         	Meteor.users.update(Meteor.userId(), {$set: {bar: result}})
       }
     }
