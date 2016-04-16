@@ -1,0 +1,8 @@
+<template name="createBar">
+  <div class="white z-depth-1">
+    <div class="container" style="padding: 15px">
+        <h3>You need to create a Bar!</h3>
+        {{> quickForm collection="Bars" type="insert" omitFields="owner,menu" id="barForm"}}
+    </div>
+  </div>
+</template>

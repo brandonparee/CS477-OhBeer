@@ -23,7 +23,8 @@ let BarsSchema = new SimpleSchema({
     type: String
   },
   "menu": {
-    type: [String]
+    type: [String],
+    optional: true
   }
 });
 

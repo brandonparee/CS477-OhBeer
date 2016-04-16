@@ -32,9 +32,29 @@ Template.default.helpers({
 			'index',
 			'dashboard'
 		], '/splash' );
+	},
+	needsBar() {
+		return (Bars.find().count() > 0)
 	}
 });
 
 Template.default.onCreated(() => {
+	  Template.instance().subscribe( 'myBar' )
+})
 
+AutoForm.hooks({
+    barForm: {
+      before: {
+        insert: (doc) => {
+          doc.owner = Meteor.userId()
+          return doc
+        }
+			},
+      after: {
+				insert: (error, result) => {
+					console.log(error, result)
+        	Meteor.users.update(Meteor.userId(), {$set: {bar: result}})
+      }
+    }
+	}
 })
