@@ -13,3 +13,10 @@ authenticatedRoutes.route( '/dashboard', {
     BlazeLayout.render( 'default', { yield: 'dashboard' } );
   }
 });
+
+authenticatedRoutes.route( '/settings', {
+  name: 'settings',
+  action() {
+    BlazeLayout.render( 'default', { yield: 'settings' } );
+  }
+});
