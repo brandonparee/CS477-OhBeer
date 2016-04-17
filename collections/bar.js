@@ -13,7 +13,23 @@ let BarsSchema = new SimpleSchema({
     type: String
   },
   "address": {
+    type: Object
+  },
+  "address.address": {
     type: String
+  },
+  "address.unit": {
+    type: String,
+    optional: true
+  },
+  "address.city": {
+    type: String
+  },
+  "address.state": {
+    type: String
+  },
+  "address.zip": {
+    type: Number
   },
   "phone": {
     type: String,
