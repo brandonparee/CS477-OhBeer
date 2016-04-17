@@ -60,7 +60,7 @@ AutoForm.hooks({
 	      }
 	    },
 			onSuccess: (formType, result) => {
-				Meteor.call('setLatLon', Meteor.user().bar);
+				Meteor.call('setLatLon', result);
 				if (formType == "insert") {
 					Bert.alert("Bar Created Successfully", 'success')
 				}else if (formType == "update"){
