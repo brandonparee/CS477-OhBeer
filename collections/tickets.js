@@ -28,7 +28,7 @@ let TicketSchema = new SimpleSchema({
   },
   'status': {
     type: String,
-    allowedValues: ['pending', 'started', 'delivering', 'complete'],
+    allowedValues: ['pending', 'started', 'delivering', 'complete', 'rejected', 'oos'],
     defaultValue: 'pending'
   },
   'orderTotal': {

@@ -28,8 +28,12 @@
                   {{/with}}
                 {{/each}}
               </ul>
-              <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">close</i></a>
-              <a class="btn-floating btn-large waves-effect waves-light orange right"><i class="material-icons">add</i></a>
+              {{#if pending this}}
+                <a class="btn-floating btn-large waves-effect waves-light orange right stage-ticket" id="{{_id}}"><i class="material-icons">add</i></a>
+              {{else}}
+                <a class="btn-floating btn-large waves-effect waves-light green right complete-ticket" id="{{_id}}"><i class="material-icons">check</i></a>
+              {{/if}}
+              <a class="btn-floating btn-large waves-effect waves-light red reject-ticket" id="{{_id}}"><i class="material-icons">close</i></a>
         </div>
       </div>
       {{/each}}
