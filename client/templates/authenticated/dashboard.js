@@ -38,5 +38,11 @@ Template.ticketList.events({
   },
   'click .complete-ticket': (event) => {
     Tickets.update(event.currentTarget.id, {$set: {status: 'complete'}})
+  },
+  'click .item-no-stock': (event) => {
+    let ids = event.currentTarget.id.split('-');
+    Tickets.update(ids[1], {$set: {status: 'oos'}})
+    MenuItems.update(ids[0], {$set: {inStock: false}});
+    //console.log(ids[0], ids[1]);
   }
 })

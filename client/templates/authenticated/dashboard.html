@@ -11,7 +11,7 @@
     {{#if tickets}}
       {{#each tickets}}
       <div class="col s12 m4">
-        <div class="card-panel white">
+        <div class="card-panel white" id="{{_id}}">
           <div class="avatar">
             {{#with userFromId owner}}
               <img src="{{avatar}}" alt="{{emails.[0].address}}" class="circle">
@@ -23,7 +23,7 @@
                   {{#with itemFromId item}}
                     <li class="collection-item">
                       {{../quantity}}X {{name}}
-                      <a href="#!" class="secondary-content"><i class="material-icons">close</i></a>
+                      <a href="#!" class="secondary-content item-no-stock" id="{{_id}}-{{../../_id}}"><i class="material-icons">close</i></a>
                     </li>
                   {{/with}}
                 {{/each}}
