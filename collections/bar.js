@@ -39,6 +39,10 @@ let BarsSchema = new SimpleSchema({
     type: String,
     optional : true
   },
+  "location.formattedAddress": {
+    type: String,
+    optional : true
+  },
   "phone": {
     type: String,
     optional: true

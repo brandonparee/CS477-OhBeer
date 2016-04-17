@@ -12,5 +12,6 @@ Meteor.methods({
     //console.log(results.data.geometry.location.lng);
     Bars.update(barId, {$set:{'location.lat': results.data.results[0].geometry.location.lat}});
     Bars.update(barId, {$set:{'location.lon': results.data.results[0].geometry.location.lng}});
+    Bars.update(barId, {$set:{'location.formattedAddress': results.data.results[0].formatted_address}});
   }
 });
