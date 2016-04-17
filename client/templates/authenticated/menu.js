@@ -7,6 +7,18 @@ AutoForm.hooks({
     before: {
       insert: (doc) => {
         doc.barId = Bars.findOne()._id
+				price_str = doc.price.toString()
+				split = price_str.split('.')
+				if (!split[1]) {
+					doc.price = doc.price*100
+				}else {
+					let dollars = parseInt(split[0])*100
+					let cents = parseInt(split[1].slice(0,2))
+					if (split[1].length <2) {
+						cents = parseInt(split[1].slice(0,1))*10
+					}
+					doc.price = dollars + cents
+				}
         return doc
       }
     },
@@ -26,3 +38,9 @@ Template.menu.helpers({
 		return "menuUpdateForm-" + id;
 	}
 });
+
+Template.afInputNumber_priceField.helpers({
+	helperr(thing) {
+		console.log(thing)
+	}
+})
