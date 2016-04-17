@@ -19,6 +19,10 @@ let MenuItemSchema = new SimpleSchema({
   },
   "category": {
     type: String
+  },
+  "inStock": {
+    type: Boolean,
+    defaultValue: true
   }
 })
 

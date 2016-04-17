@@ -9,9 +9,14 @@ Template.ticketList.onCreated(() => {
 
 Template.ticketList.helpers({
   tickets() {
-    return Tickets.find({$and: [{status: {$not: 'complete'}},
+    curr = Tickets.find({$and: [{status: {$not: 'complete'}},
       {status: {$not: 'rejected'}},
       {status: {$not: 'oos'}}]})
+    if (curr.count() > 0){
+      return curr
+    } else {
+      return false
+    }
   },
   userFromId(id) {
     return Meteor.users.findOne(id)
