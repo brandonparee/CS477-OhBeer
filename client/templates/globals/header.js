@@ -3,6 +3,12 @@ Template.header.helpers({
         let login = FlowRouter.path('splash'),
             index = FlowRouter.path('index');
         return !Meteor.loggingIn() && !Meteor.userId() ? login : index;
+    },
+    currentBar() {
+      if (Meteor.user().bar) {
+        return Bars.findOne(Meteor.user().bar).name
+      }
+      return false
     }
 });
 
