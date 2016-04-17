@@ -11,6 +11,10 @@ Meteor.publish( 'myBar', function() {
   }
 })
 
+Meteor.publish('allBars', function() {
+  return Bars.find()
+})
+
 Meteor.publish('aBar', function(barId) {
   return Bars.find({_id: barId})
 })
