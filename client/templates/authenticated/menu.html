@@ -3,7 +3,12 @@
     <div class="section">
       <div class="container" style="padding:10px;">
         <h5>Add New Menu Item</h5>
-        {{> quickForm collection="MenuItems" id="insertMenuForm" type="insert" omitFields="barId"}}
+        {{#autoForm collection="MenuItems" id="insertMenuForm" type="insert"}}
+          {{>afQuickField name="name"}}
+          {{>afQuickField name="category"}}
+          {{>afFieldInput name="price" type="number" template="priceField"}}
+          <button type="submit" class="btn">Submit</button>
+        {{/autoForm}}
       </div>
     </div>
     <div class="divider"></div>
@@ -19,7 +24,7 @@
                   {{name}}
                 </div>
                 <div class="col s3">
-                  {{price}}
+                  {{prettyPrice price}}
                 </div>
                 <div class="col s3">
                   {{category}}
@@ -45,6 +50,16 @@
           {{> menuHelper}}
         </ul>
       </div>
+    </div>
+  </div>
+</template>
+
+<template name="afInputNumber_priceField">
+  <div class="row">
+    <div class="input-field col s12 data-required">
+      <i class="material-icons prefix">attach_money</i>
+      <input type="number" step="0.01" value="{{this.value}}" {{attsPlusFormControlClass}}/>
+      <label>{{afFieldLabelText name=this.atts.name}}</label>
     </div>
   </div>
 </template>

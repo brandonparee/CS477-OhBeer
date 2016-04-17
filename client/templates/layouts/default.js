@@ -46,6 +46,13 @@ Template.default.onCreated(() => {
 		Template.instance().subscribe( 'me' )
 })
 
+Template.registerHelper('prettyPrice', (price) => {
+	let str = "$" + (price/100).toString()
+	if (str.split('.')[1].length < 2) {
+		str += "0"
+	}
+	return str
+})
 AutoForm.hooks({
     barForm: {
       before: {
@@ -60,7 +67,7 @@ AutoForm.hooks({
 	      }
 	    },
 			onSuccess: (formType, result) => {
-				Meteor.call('setLatLon', Meteor.user().bar);
+				Meteor.call('setLatLon', result);
 				if (formType == "insert") {
 					Bert.alert("Bar Created Successfully", 'success')
 				}else if (formType == "update"){
