@@ -20,3 +20,10 @@ authenticatedRoutes.route( '/create-bar', {
     BlazeLayout.render( 'default', { yield: 'createBar' } );
   }
 });
+
+authenticatedRoutes.route( '/sample-ticket', {
+  name: 'sampleTicket',
+  action() {
+    BlazeLayout.render( 'default', {yield: 'sampleTicket'})
+  }
+})
