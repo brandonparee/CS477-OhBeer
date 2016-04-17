@@ -3,7 +3,9 @@
         <nav class="">
             <div class="nav-wrapper">
                 <a class="brand-logo left" href="{{brandLink}}" style="padding-left:20px;"><img src="/ohbeer_txtlogo.png" alt="Oh, Beer!" height="60" width="150"/></a>
+                {{# if Template.subscriptionsReady }}
                 <a class="brand-logo center" href="{{brandLink}}" style="padding-left:20px;">{{#if currentBar}}{{currentBar}}{{/if}}</a>
+                {{else}} {{> loading}} {{/if}}
                 {{#if currentUser}}
                 	{{> authenticatedNavigation}}
                 {{else}}

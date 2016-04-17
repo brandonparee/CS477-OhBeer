@@ -25,3 +25,7 @@ Template.header.events({
         });
     }
 });
+
+Template.header.onCreated(() => {
+  Template.instance().subscribe('myBar')
+})

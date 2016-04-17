@@ -15,3 +15,15 @@ Template.registerHelper( 'parseMarkdown', ( string ) => {
     return parseMarkdown( string );
   }
 });
+
+Template.registerHelper('prettyPrice', (price) => {
+	let str = "$" + (price/100).toString()
+  if (str.split('.')[1]){
+  	if (str.split('.')[1].length < 2) {
+  		str += "0"
+  	}
+  }else{
+    str += ".00"
+  }
+	return str
+})

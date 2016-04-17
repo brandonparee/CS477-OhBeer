@@ -46,13 +46,6 @@ Template.default.onCreated(() => {
 		Template.instance().subscribe( 'me' )
 })
 
-Template.registerHelper('prettyPrice', (price) => {
-	let str = "$" + (price/100).toString()
-	if (str.split('.')[1].length < 2) {
-		str += "0"
-	}
-	return str
-})
 AutoForm.hooks({
     barForm: {
       before: {

@@ -38,9 +38,3 @@ Template.menu.helpers({
 		return "menuUpdateForm-" + id;
 	}
 });
-
-Template.afInputNumber_priceField.helpers({
-	helperr(thing) {
-		console.log(thing)
-	}
-})
