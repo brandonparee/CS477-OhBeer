@@ -3,7 +3,7 @@
     <div class="section">
       <div class="container" style="padding:10px;">
         <h5>Add New Menu Item</h5>
-        {{> quickForm collection="MenuItems" id="insertMenuForm" type="insert" omitFields="barId"}}
+        {{> quickForm collection="MenuItems" id="insertMenuForm" type="insert" omitFields="barId" options="allowed"}}
       </div>
     </div>
     <div class="divider"></div>
@@ -26,9 +26,16 @@
                 </div>
               </div>
             </div>
-            <div class="collapsible-body"><p>Test form</p></div>
+            <div class="collapsible-body">
+              <div class="section">
+                <div class="container">
+                  {{> quickForm collection="MenuItems" id="insertMenuForm" type="update" omitFields="barId" doc=this}}
+                </div>
+              </div>
+            </div>
           </li>
           {{/each}}
+          {{> menuHelper}}
         </ul>
       </div>
     </div>

@@ -18,7 +18,7 @@ let MenuItemSchema = new SimpleSchema({
     type: String
   },
   "category": {
-    type: [String]
+    type: String
   }
 })
 
