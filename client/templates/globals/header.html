@@ -2,7 +2,8 @@
     <div class="navbar-fixed">
         <nav class="">
             <div class="nav-wrapper">
-                <a class="brand-logo left" href="{{brandLink}}" style="padding-left:20px;"><img src="/ohbeer_txtlogo.png" alt="Oh, Beer!" height="60" width="150"/></a> 
+                <a class="brand-logo left" href="{{brandLink}}" style="padding-left:20px;"><img src="/ohbeer_txtlogo.png" alt="Oh, Beer!" height="60" width="150"/></a>
+                <a class="brand-logo center" href="{{brandLink}}" style="padding-left:20px;">{{#if currentBar}}{{currentBar}}{{/if}}</a>
                 {{#if currentUser}}
                 	{{> authenticatedNavigation}}
                 {{else}}
