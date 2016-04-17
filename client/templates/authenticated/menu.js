@@ -21,5 +21,8 @@ AutoForm.hooks({
 Template.menu.helpers({
   allMenuItems(){
     return MenuItems.find();
-  }
+  },
+	uniqueFormId(id){
+		return "menuUpdateForm-" + id;
+	}
 });
