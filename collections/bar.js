@@ -25,6 +25,14 @@ let BarsSchema = new SimpleSchema({
   "menu": {
     type: [String],
     optional: true
+  },
+  "tableService": {
+    type: Boolean,
+    autoform: {
+      afFieldInput: {
+        type: "boolean-checkbox"
+      }
+    }
   }
 });
 
