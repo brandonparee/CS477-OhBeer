@@ -32,10 +32,12 @@ let BarsSchema = new SimpleSchema({
     type: Number
   },
   "location.lat": {
-    type: String
+    type: String,
+    optional : true
   },
   "location.lon": {
-    type: String
+    type: String,
+    optional : true
   },
   "phone": {
     type: String,
