@@ -5,6 +5,7 @@
   	<li class="logout"><a>Logout</a></li>
   </ul>
   <ul class="right hide-on-med-and-down">
+		<li class="{{currentRoute 'sampleTicket'}}"><a href="{{pathFor 'sampleTicket'}}">Sample Ticket</a></li>
     <li class="{{currentRoute 'index'}}"><a href="{{pathFor 'index'}}">Orders</a></li>
     <li><a class="dropdown-button" data-beloworigin="true" data-activates="authenticatedDropdown">{{currentUser.emails.[0].address}}<i class="material-icons right">arrow_drop_down</i></a></li>
   </ul>

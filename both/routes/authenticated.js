@@ -21,6 +21,13 @@ authenticatedRoutes.route( '/create-bar', {
   }
 });
 
+authenticatedRoutes.route( '/sample-ticket', {
+  name: 'sampleTicket',
+  action() {
+    BlazeLayout.render( 'default', {yield: 'sampleTicket'})
+  }
+})
+
 authenticatedRoutes.route( '/history' , {
   name: 'history',
   action() {

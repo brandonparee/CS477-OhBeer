@@ -1,48 +1,39 @@
 <template name="dashboard">
+  {{#if Template.subscriptionsReady}}
+    {{> ticketList}}
+  {{else}} {{> loading}} {{/if}}
+</template>
+
+<template name="ticketList">
+  {{#if Template.subscriptionsReady}}
   <div class="container section">
     <div class="row">
+      {{#each tickets}}
       <div class="col s12 m4">
         <div class="card-panel white">
           <div class="avatar">
-            <img src="http://materializecss.com/images/yuna.jpg" alt="" class="circle">
-            <span class="title"><h5>Order No. 12345</h5></span>
+            {{#with userFromId owner}}
+              <img src="{{avatar}}" alt="{{emails.[0].address}}" class="circle">
+              <span class="title"><h5>Order No. {{../_id}}</h5></span>
+            {{/with}}
           </div>
 
               <ul class="collection">
-                <li class="collection-item">
-                  2x Vodka Tonic
-                  <a href="#!" class="secondary-content"><i class="material-icons">close</i></a>
-                </li>
-                <li class="collection-item">
-                  1x Dos Equis
-                  <a href="#!" class="secondary-content"><i class="material-icons">close</i></a>
-                </li>
-                <li class="collection-item">
-                  1x Rum & Orange Juice
-                  <a href="#!" class="secondary-content"><i class="material-icons">close</i></a>
-                </li>
-                <li class="collection-item">
-                  4x Cock Meat Sandwich
-                  <a href="#!" class="secondary-content"><i class="material-icons">close</i></a>
-                </li>
+                {{#each order}}
+                  {{#with itemFromId item}}
+                    <li class="collection-item">
+                      {{../quantity}}X {{name}}
+                      <a href="#!" class="secondary-content"><i class="material-icons">close</i></a>
+                    </li>
+                  {{/with}}
+                {{/each}}
               </ul>
               <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">close</i></a>
               <a class="btn-floating btn-large waves-effect waves-light orange right"><i class="material-icons">add</i></a>
         </div>
       </div>
-      <div class="col s12 m4">
-        <div class="card-panel white">
-          <ul>
-            <li>Item</li>
-            <li>Item</li>
-            <li>Item</li>
-            <li>
-              <a class="btn-floating btn-large waves-effect waves-light orange"><i class="material-icons">undo</i></a>
-              <a class="btn-floating btn-large waves-effect waves-light green right"><i class="material-icons">done</i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      {{/each}}
     </div>
   </div>
+  {{else}} {{> loading}} {{/if}}
 </template>

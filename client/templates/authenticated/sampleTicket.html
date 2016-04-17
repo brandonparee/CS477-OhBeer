@@ -1,0 +1,15 @@
+<template name="sampleTicket">
+  {{#if Template.subscriptionsReady}}
+    {{> ticketForm}}
+  {{else}}
+    {{> loading}}
+  {{/if}}
+</template>
+
+<template name="ticketForm">
+    {{# autoForm type="insert" collection="Tickets" id="sampleTicketForm"}}
+      {{> afQuickField name="order"}}
+      {{> afQuickField name="tipTotal"}}
+      <button type="submit" class="btn">Submit</button>
+    {{/autoForm}}
+</template>
