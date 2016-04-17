@@ -15,14 +15,21 @@
           <li>
             <div class="collapsible-header">
               <div class="row">
-                <div class="col s4">
+                <div class="col s3">
                   {{name}}
                 </div>
-                <div class="col s4">
+                <div class="col s3">
                   {{price}}
                 </div>
-                <div class="col s4">
+                <div class="col s3">
                   {{category}}
+                </div>
+                <div class="col s3">
+                  {{#if inStock}}
+                    In Stock
+                  {{else}}
+                    Out of Stock
+                  {{/if}}
                 </div>
               </div>
             </div>
