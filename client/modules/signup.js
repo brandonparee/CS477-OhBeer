@@ -35,7 +35,8 @@ let validation = ( template ) => {
 let _handleSignup = ( template ) => {
   let user = {
     email: template.find( '[name="emailAddress"]' ).value,
-    password: template.find( '[name="password"]' ).value
+    password: template.find( '[name="password"]' ).value,
+    profile: {}
   };
 
   Accounts.createUser( user, ( error ) => {
