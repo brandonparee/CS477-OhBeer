@@ -27,3 +27,10 @@ authenticatedRoutes.route( '/sample-ticket', {
     BlazeLayout.render( 'default', {yield: 'sampleTicket'})
   }
 })
+
+authenticatedRoutes.route( '/history' , {
+  name: 'history',
+  action() {
+    BlazeLayout.render('default', { yield: 'history' });
+  }
+});

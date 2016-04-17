@@ -12,24 +12,32 @@ let BarsSchema = new SimpleSchema({
   "name": {
     type: String
   },
-  "address": {
+  "location": {
     type: Object
   },
-  "address.address": {
+  "location.address": {
     type: String
   },
-  "address.unit": {
+  "location.unit": {
     type: String,
     optional: true
   },
-  "address.city": {
+  "location.city": {
     type: String
   },
-  "address.state": {
+  "location.state": {
     type: String
   },
-  "address.zip": {
+  "location.zip": {
     type: Number
+  },
+  "location.lat": {
+    type: String,
+    optional : true
+  },
+  "location.lon": {
+    type: String,
+    optional : true
   },
   "phone": {
     type: String,

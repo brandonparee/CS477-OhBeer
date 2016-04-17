@@ -26,7 +26,7 @@
   <div class="white z-depth-1">
     <div class="container" style="padding: 15px">
       {{#with bar}}
-        {{> quickForm collection="Bars" type="update" omitFields="owner,menu" id="barForm" doc=this}}
+        {{> quickForm collection="Bars" type="update" omitFields="owner,menu, location.lat, location.lon" id="barForm" doc=this}}
       {{/with}}
     </div>
   </div>
