@@ -71,7 +71,9 @@ background: linear-gradient(top, #000000 , #434343); /* W3C, IE 10+/ Edge, Firef
   -webkit-animation: beer-droplet 3s 0s infinite;
 }
 
-
+.tabs{
+	overflow-x: hidden !important;
+}
 
 
 
