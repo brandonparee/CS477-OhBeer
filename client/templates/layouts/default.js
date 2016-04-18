@@ -57,10 +57,16 @@ AutoForm.hooks({
       after: {
 				insert: (error, result) => {
         	Meteor.users.update(Meteor.userId(), {$set: {bar: result}})
-	      }
+					console.log(result);
+					Meteor.call('setLatLon', result);
+	      },
+				update: (error, result) => {
+					console.log(error, result);
+					Meteor.call('setLatLon', Meteor.user().bar);
+				}
 	    },
 			onSuccess: (formType, result) => {
-				Meteor.call('setLatLon', result);
+
 				if (formType == "insert") {
 					Bert.alert("Bar Created Successfully", 'success')
 				}else if (formType == "update"){
