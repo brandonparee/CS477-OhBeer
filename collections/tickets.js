@@ -55,6 +55,16 @@ let TicketSchema = new SimpleSchema({
           return ret
       }
     }
+  },
+  'dateCreated': {
+    type: Date,
+    defaultValue: new Date()
+  },
+  'dateUpdated': {
+    type: Date,
+    autoValue: function(){
+      return new Date()
+    }
   }
 });
 

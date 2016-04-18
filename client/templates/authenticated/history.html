@@ -1,11 +1,4 @@
 <template name="history">
-  <style>
-    @media (max-width: 1920px) {
-      .data-chart {
-        width: 1280;
-      }
-    }
-  </style>
   {{#if Template.subscriptionsReady}}
   <div class="container">
     <div class="section white z-depth-1" id="graph-container">
@@ -54,6 +47,10 @@
   {{#if Template.subscriptionsReady}}
     {{historyLoaded}}
     <div id="chart1" class="data-chart" style="height:400px;"></div>
+    <button id="startDate" class="btn datePickerBtn">Pick Start Date</button>
+    <input type="date" class="datepicker" id="inputStartDate" style="display:none;">
+    <button id="endDate" class="btn datePickerBtn">Pick End Date</button>
+    <input type="date" class="datepicker" id="inputEndDate" style="display:none;">
   {{else}}
     {{> loading}}
   {{/if}}

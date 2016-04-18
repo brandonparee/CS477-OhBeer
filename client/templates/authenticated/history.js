@@ -58,6 +58,10 @@ Template.drinkSalesGraph.helpers({
 
 Template.incomeGraph.helpers({
   historyLoaded(){
+    $('.datePickerBtn').click(function(event){
+      event.stopPropagation();
+      $(".datepicker").first().pickadate("picker").open();
+    });
     let itemList = MenuItems.find().map(function(item){
       return item.name;
     })
@@ -80,6 +84,10 @@ Template.incomeGraph.helpers({
     })
     let bar = Bars.findOne(Meteor.user().bar);
     $('ul.tabs').tabs();
+    $('.datepicker').pickadate({
+      selectMonths: true, // Creates a dropdown to control month
+      selectYears: 15 // Creates a dropdown of 15 years to control year
+    });
     $('#chart1').highcharts({
         chart: {
             type: 'column',
@@ -103,3 +111,10 @@ Template.incomeGraph.helpers({
     });
   }
 });
+
+Template.incomeGraph.events({
+  'change .datepicker': (event) => {
+    $('#chart1').empty()
+    console.log(event.currentTarget.value)
+  }
+})
