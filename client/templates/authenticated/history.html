@@ -18,6 +18,12 @@
       <div id="completion-time" class="col s12">
         {{> completionTimeGraph}}
       </div>
+      <button id="inputStartDate" class="btn datePickerBtn">Pick Start Date</button>
+      <span>{{formatDateTime (session 'startDate')}}</span>
+      <input type="date" class="datepicker" id="inputStartDate" style="display:none;" max="{{today}}">
+      <button id="inputEndDate" class="btn datePickerBtn right">Pick End Date</button>
+      <span class="right">{{formatDateTime (session 'endDate')}}</span>
+      <input type="date" class="datepicker" id="inputEndDate" style="display:none;" max="{{today}}">
     </div>
   </div>
   {{> historyHelper}}
@@ -47,10 +53,6 @@
   {{#if Template.subscriptionsReady}}
     {{historyLoaded}}
     <div id="chart1" class="data-chart" style="height:400px;"></div>
-    <button id="startDate" class="btn datePickerBtn">Pick Start Date</button>
-    <input type="date" class="datepicker" id="inputStartDate" style="display:none;">
-    <button id="endDate" class="btn datePickerBtn">Pick End Date</button>
-    <input type="date" class="datepicker" id="inputEndDate" style="display:none;">
   {{else}}
     {{> loading}}
   {{/if}}
@@ -59,7 +61,7 @@
 <template name="completionTimeGraph">
   {{#if Template.subscriptionsReady}}
     {{historyLoaded}}
-    <div id="chart"  class="data-chart" style="height:400px;"></div>
+    <div id="chart2"  class="data-chart" style="height:400px;"></div>
   {{else}}
     {{> loading}}
   {{/if}}
