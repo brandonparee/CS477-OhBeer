@@ -37,6 +37,24 @@ let TicketSchema = new SimpleSchema({
   'tipTotal': {
     type: Number,
     defaultValue: 0
+  },
+  'orderNum': {
+    type: Number,
+    max: 999,
+    min: 1,
+    autoValue: function() {
+        let bar = Bars.findOne(this.field('barId').value)
+        if (bar){
+          let ret = bar.orderTicker
+          if (ret > 999){
+            Bars.update(bar._id, {$set: {orderTicker: 1}})
+          }else{
+            if (Meteor.isServer)
+              Bars.update(bar._id, {$inc: {orderTicker: 1}})
+          }
+          return ret
+      }
+    }
   }
 });
 

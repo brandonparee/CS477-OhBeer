@@ -61,6 +61,12 @@ let BarsSchema = new SimpleSchema({
         type: "boolean-checkbox"
       }
     }
+  },
+  "orderTicker": {
+    type: Number,
+    min: 1,
+    max: 999,
+    defaultValue: 1
   }
 });
 
