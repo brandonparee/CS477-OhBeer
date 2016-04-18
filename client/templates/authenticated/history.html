@@ -1,7 +1,69 @@
 <template name="history">
-  <div class="white z-depth-1">
-    <div class="container" style="padding: 15px">
-    
+  <style>
+    @media (max-width: 1920px) {
+      .data-chart {
+        width: 1280;
+      }
+    }
+  </style>
+  {{#if Template.subscriptionsReady}}
+  <div class="container">
+    <div class="section white z-depth-1" id="graph-container">
+      <div class="col s12">
+        <ul class="tabs">
+          <li class="tab col s3"><a class="active" href="#drink-chart">Drink Sales</a></li>
+          <li class="tab col s3"><a href="#income">Income</a></li>
+          <li class="tab col s3"><a href="#completion-time">Completion Time</a></li>
+        </ul>
+      </div>
+      <div id="drink-chart" class="col s12">
+        {{> drinkSalesGraph}}
+      </div>
+      <div id="income" class="col s12">
+        {{> incomeGraph}}
+      </div>
+      <div id="completion-time" class="col s12">
+        {{> completionTimeGraph}}
+      </div>
     </div>
   </div>
+  {{> historyHelper}}
+  {{else}}
+    {{> loading}}
+  {{/if}}
+</template>
+
+<template name="historyHelper">
+  {{#if Template.subscriptionsReady}}
+    {{historyLoaded}}
+  {{else}}
+    {{> loading}}
+  {{/if}}
+</template>
+
+<template name="drinkSalesGraph">
+  {{#if Template.subscriptionsReady}}
+    {{historyLoaded}}
+    <div id="chart" class="data-chart" style="height:400px;"></div>
+  {{else}}
+    {{> loading}}
+  {{/if}}
+</template>
+
+<template name="incomeGraph">
+  {{#if Template.subscriptionsReady}}
+    {{historyLoaded}}
+    <div id="chart1" class="data-chart" style="height:400px;"></div>
+  {{else}}
+    {{> loading}}
+  {{/if}}
+</template>
+
+<template name="completionTimeGraph">
+  {{#if Template.subscriptionsReady}}
+    {{historyLoaded}}
+    <div id="chart"  class="data-chart" style="height:400px;"></div>
+  {{else}}
+    {{> loading}}
+  {{/if}}
 </template>
