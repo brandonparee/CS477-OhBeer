@@ -20,7 +20,8 @@ let BarsSchema = new SimpleSchema({
   },
   "location.unit": {
     type: String,
-    optional: true
+    optional: true,
+    label: "Apartment/Unit"
   },
   "location.city": {
     type: String

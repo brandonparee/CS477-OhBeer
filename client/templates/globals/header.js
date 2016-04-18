@@ -5,8 +5,10 @@ Template.header.helpers({
         return !Meteor.loggingIn() && !Meteor.userId() ? login : index;
     },
     currentBar() {
-      if (Meteor.user().bar) {
-        return Bars.findOne(Meteor.user().bar).name
+      if (Meteor.user()){
+        if (Meteor.user().bar) {
+          return Bars.findOne(Meteor.user().bar).name
+        }
       }
       return false
     }
