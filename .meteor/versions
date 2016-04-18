@@ -37,6 +37,7 @@ ecmascript@0.4.2
 ecmascript-runtime@0.2.9
 ejson@1.0.10
 email@1.0.11
+fastclick@1.0.10
 fortawesome:fontawesome@4.4.0_1
 fourseven:scss@3.4.3
 geojson-utils@1.0.7
@@ -51,6 +52,7 @@ jquery@1.11.7
 kadira:blaze-layout@2.3.0
 kadira:flow-router@2.11.0
 lai:collection-extensions@0.1.4
+launch-screen@1.0.10
 less@2.5.7
 livedata@1.0.17
 localstorage@1.0.8
@@ -83,6 +85,8 @@ meteortoys:toykit@2.2.1
 minifier-css@1.1.10
 minifier-js@1.1.10
 minimongo@1.0.13
+mobile-experience@1.0.3
+mobile-status-bar@1.0.11
 modules@0.5.2
 modules-runtime@0.6.2
 momentjs:moment@2.12.0
