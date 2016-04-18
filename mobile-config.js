@@ -30,7 +30,7 @@ App.icons({
 
 //set up Cordova preferences
 App.setPreference('HideKeyboardFromAccessoryBar', true);
+App.setPreference('StatusBarBackgroundColor', '#512da8');
 App.setPreference('Orientation', 'default');
-App.setPreference('Fullscreen', true);
 
 //set up preferences for a particular Cordova Plugin
