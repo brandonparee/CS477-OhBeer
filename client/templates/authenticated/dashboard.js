@@ -40,8 +40,11 @@ Template.ticketList.events({
     Tickets.update(event.currentTarget.id, {$set: {status: 'complete'}})
   },
   'click .item-no-stock': (event) => {
+    $('#modal-' + event.currentTarget.id).openModal();
+
+  },
+  'click .confirm-oos': (event) => {
     Meteor.call('updateOutOfStockTickets', event.currentTarget.id, Bars.findOne()._id);
     MenuItems.update(event.currentTarget.id, {$set: {inStock: false}});
-    //console.log(ids[0], ids[1]);
   }
 })

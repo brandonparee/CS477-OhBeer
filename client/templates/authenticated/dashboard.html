@@ -23,7 +23,16 @@
                   {{#with itemFromId item}}
                     <li class="collection-item">
                       {{../quantity}}X {{name}}
-                      <a href="#!" class="secondary-content item-no-stock" id="{{_id}}"><i class="material-icons">close</i></a>
+                      <a href="#modal-{{_id}}" class="secondary-content item-no-stock" id="{{_id}}"><i class="material-icons">close</i></a>
+                      <div id="modal-{{_id}}" class="modal">
+                        <div class="modal-content">
+                          <h4>Mark {{name}} out of stock?</h4>
+                        </div>
+                        <div class="modal-footer">
+                          <a href="#!" id="{{_id}}" class=" modal-action modal-close waves-effect waves-green btn-flat confirm-oos">Yes</a>
+                          <a href="#!" class=" modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
+                        </div>
+                      </div>
                     </li>
                   {{/with}}
                 {{/each}}

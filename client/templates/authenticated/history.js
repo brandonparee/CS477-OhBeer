@@ -28,7 +28,6 @@ Template.drinkSalesGraph.helpers({
           }
         }
       })
-      console.log(ticketCounts)
       dataVals.push(ticketCounts)
     })
     let bar = Bars.findOne(Meteor.user().bar);
@@ -79,7 +78,6 @@ Template.incomeGraph.helpers({
           }
         }
       })
-      console.log(ticketCounts)
       dataVals.push(ticketCounts)
     })
     let bar = Bars.findOne(Meteor.user().bar);
