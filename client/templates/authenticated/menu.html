@@ -40,9 +40,9 @@
             </div>
             <div class="collapsible-body">
               <div class="section">
-                <div class="right deleteItem" style="padding-right: 15px;" >
-                  <i class="material-icons right" id="{{_id}}" >close</i>
-                </div>
+                <a href="#" class="right deleteItem" style="padding-right: 15px;" >
+                  <i class="material-icons black-text" id="{{_id}}" >close</i>
+                </a>
                 <div class="container">
                   {{> quickForm collection="MenuItems" id=(uniqueFormId this._id) type="update" omitFields="barId" doc=this}}
                 </div>
