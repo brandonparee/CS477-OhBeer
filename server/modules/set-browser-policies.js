@@ -1,3 +1,4 @@
 export default function() {
-  // BrowserPolicy.content.allowOriginForAll( '*.com' );
+  BrowserPolicy.content.allowOriginForAll('*');
+  BrowserPolicy.content.allowInlineStyles()
 }

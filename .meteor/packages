@@ -9,7 +9,7 @@ jquery
 check
 audit-argument-checks
 themeteorchef:jquery-validation
-#browser-policy
+browser-policy
 mobile-experience
 
 themeteorchef:bert
@@ -30,10 +30,8 @@ aldeed:collection2
 tracker
 momentjs:moment
 alanning:roles
-themeteorchef:seeder
-digilord:faker
 themeteorchef:commonmark
-risul:moment-timezone
+#risul:moment-timezone
 standard-minifier-css
 standard-minifier-js
 

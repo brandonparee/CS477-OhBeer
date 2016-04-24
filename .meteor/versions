@@ -18,6 +18,10 @@ blaze@2.1.7
 blaze-html-templates@1.0.4
 blaze-tools@1.0.8
 boilerplate-generator@1.0.8
+browser-policy@1.0.9
+browser-policy-common@1.0.9
+browser-policy-content@1.0.10
+browser-policy-framing@1.0.10
 caching-compiler@1.0.4
 caching-html-compiler@1.0.6
 callback-hook@1.0.8
@@ -32,7 +36,6 @@ ddp-rate-limiter@1.0.4
 ddp-server@1.2.6
 deps@1.0.12
 diff-sequence@1.0.5
-digilord:faker@1.0.7
 ecmascript@0.4.3
 ecmascript-runtime@0.2.10
 ejson@1.0.11
@@ -107,7 +110,6 @@ reactive-dict@1.1.7
 reactive-var@1.0.9
 reload@1.1.8
 retry@1.0.7
-risul:moment-timezone@0.5.0_5
 routepolicy@1.0.10
 service-configuration@1.0.9
 session@1.1.5
@@ -123,7 +125,6 @@ templating-tools@1.0.4
 themeteorchef:bert@2.1.0
 themeteorchef:commonmark@1.1.0
 themeteorchef:jquery-validation@1.14.0
-themeteorchef:seeder@0.2.0
 tracker@1.0.13
 ui@1.0.11
 underscore@1.0.8
