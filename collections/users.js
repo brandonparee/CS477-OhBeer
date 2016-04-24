@@ -38,6 +38,10 @@ User = new SimpleSchema({
   bar: {
     type: String,
     optional: true
+  },
+  "profile.profilePicture": {
+    type: String,
+    optional: true
   }
 });
 Meteor.users.attachSchema(User);
