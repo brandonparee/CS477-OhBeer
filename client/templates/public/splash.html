@@ -1,17 +1,20 @@
 <template name="splash">
-	<div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-    <!-- <div id="beer"></div> -->
-      <br>
-      <h1 class="header center">Welcome to Oh, Beer!</h1>
-      <div class="row center">
-        <h5 class="header col s12 light">Bringing bartending into the 21st century</h5>
+	<div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center white-text text-lighten-2">Welcome to Oh, Beer!</h1>
+        <div class="row center">
+          <h5 class="header col s12 light white-text">Bringing bartending into the 21st century</h5>
+        </div>
+        <div class="row center">
+          <a href="{{pathFor 'signup'}}" id="download-button" class="btn-large waves-effect waves-light">Get Started</a>
+        </div>
+        <br><br>
+
       </div>
-      <div class="row center">
-        <a href="{{pathFor 'signup'}}" id="download-button" class="btn-large waves-effect waves-light">Get Started</a>
-      </div>
-      <br><br>
     </div>
+    <div class="parallax"><img src="/beer_background.png" alt="Unsplashed background img 1" style="display: block; transform: translate3d(-50%, 252px, 0px);"></div>
   </div>
 
   <div class="container">
