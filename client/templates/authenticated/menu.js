@@ -29,6 +29,12 @@ AutoForm.hooks({
     }
   }
 });
+Template.menu.events({
+	"click .deleteItem": (event) => {
+		MenuItems.remove({"_id": event.target.id})
+		console.log(event);
+	}
+})
 
 Template.menu.helpers({
   allMenuItems(){
