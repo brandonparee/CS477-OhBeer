@@ -86,7 +86,7 @@ initCompletionTime = function() {
   $('#chart2').highcharts({
       chart: {
           type: 'line',
-          width: document.getElementById('graph-container').clientWidth
+          width: document.getElementById('graph-container') ? document.getElementById('graph-container').clientWidth : 0
       },
       title: {
           text: 'Completion Time'
@@ -133,7 +133,7 @@ initIncome = function() {
   $('#chart1').highcharts({
       chart: {
           type: 'line',
-          width: document.getElementById('graph-container').clientWidth
+          width: document.getElementById('graph-container') ? document.getElementById('graph-container').clientWidth : 0
       },
       title: {
           text: 'Income'
@@ -183,7 +183,7 @@ initDrinkSales = function() {
   $('#chart').highcharts({
       chart: {
           type: 'column',
-          width:  document.getElementById('graph-container').clientWidth
+          width:  document.getElementById('graph-container') ? document.getElementById('graph-container').clientWidth : 0
       },
       title: {
           text: 'Drink Sales by Drink'

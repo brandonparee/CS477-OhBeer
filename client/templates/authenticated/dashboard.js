@@ -34,13 +34,19 @@ Template.ticketList.events({
     Tickets.update(event.currentTarget.id, {$set: {status: 'started'}})
   },
   'click .reject-ticket': (event) => {
+    $('#rejectModal-' + event.currentTarget.id).openModal();
+  },
+  'click .confirm-reject-order': (event) => {
     Tickets.update(event.currentTarget.id, {$set: {status: 'rejected'}})
   },
   'click .complete-ticket': (event) => {
+    $('#completeModal-' + event.currentTarget.id).openModal();
+  },
+  'click .confirm-complete-order': (event) => {
     Tickets.update(event.currentTarget.id, {$set: {status: 'complete'}})
   },
   'click .item-no-stock': (event) => {
-    $('#modal-' + event.currentTarget.id).openModal();
+    $('#oosModal-' + event.currentTarget.id).openModal();
 
   },
   'click .confirm-oos': (event) => {

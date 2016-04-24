@@ -24,7 +24,7 @@
                     <li class="collection-item">
                       {{../quantity}}X {{name}}
                       <a href="#modal-{{_id}}" class="secondary-content item-no-stock" id="{{_id}}"><i class="material-icons">close</i></a>
-                      <div id="modal-{{_id}}" class="modal">
+                      <div id="oosModal-{{_id}}" class="modal">
                         <div class="modal-content">
                           <h4>Mark {{name}} out of stock?</h4>
                         </div>
@@ -41,8 +41,32 @@
                 <a class="btn-floating btn-large waves-effect waves-light orange right stage-ticket" id="{{_id}}"><i class="material-icons">add</i></a>
               {{else}}
                 <a class="btn-floating btn-large waves-effect waves-light green right complete-ticket" id="{{_id}}"><i class="material-icons">check</i></a>
+                <div id="completeModal-{{_id}}" class="modal">
+                  <div class="modal-content">
+                    <h4>Is {{#with userFromId owner}}
+                      <img src="{{avatar}}" alt="{{emails.[0].address}}" class="circle">
+                      {{/with}} at least 21 years old?
+                    </h4>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" id="{{_id}}" class=" modal-action modal-close waves-effect waves-green btn-flat confirm-complete-order">Yes</a>
+                    <a href="#!" class=" modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
+                  </div>
+                </div>
               {{/if}}
               <a class="btn-floating btn-large waves-effect waves-light red reject-ticket" id="{{_id}}"><i class="material-icons">close</i></a>
+              <div id="rejectModal-{{_id}}" class="modal">
+                <div class="modal-content">
+                  <h4>Are you sure you want to reject the order from {{#with userFromId owner}}
+                    <img src="{{avatar}}" alt="{{emails.[0].address}}" class="circle">
+                    {{/with}}?
+                  </h4>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" id="{{_id}}" class=" modal-action modal-close waves-effect waves-green btn-flat confirm-reject-order">Yes</a>
+                  <a href="#!" class=" modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
+                </div>
+              </div>
         </div>
       </div>
       {{/each}}
