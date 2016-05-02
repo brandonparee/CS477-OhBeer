@@ -4,7 +4,7 @@ Meteor.publish( 'menuItems', function() {
 
 Meteor.publish( 'myBar', function() {
   let usr = Meteor.users.findOne(this.userId)
-  if (usr.bar)
+  if (typeof usr.bar !== 'undefined')
     return Bars.find({_id: usr.bar})
   else {
     return []
@@ -32,5 +32,5 @@ Meteor.publish( 'me', function() {
 })
 
 Meteor.publish( 'allUsers', function() {
-  return Users.find()
+  return Meteor.users.find()
 })

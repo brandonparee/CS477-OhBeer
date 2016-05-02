@@ -1,7 +1,9 @@
 <template name="dashboard">
   {{#if Template.subscriptionsReady}}
     {{> ticketList}}
-  {{else}} {{> loading}} {{/if}}
+  {{else}}
+    {{> loading}}
+  {{/if}}
 </template>
 
 <template name="ticketList">
