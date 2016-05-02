@@ -16,9 +16,9 @@ Meteor.publish('allBars', function() {
 })
 
 Meteor.publish( 'myMenu', function(barId) {
-  check(barId, String);
-  let myId = Bars.findOne(barId);
-  return MenuItems.find({barId: myId._id});
+  check(barId, String)
+  let myId = Bars.findOne(barId)
+  return MenuItems.find({barId: myId._id})
 })
 
 Meteor.publish( 'barTickets', function(barId) {
@@ -29,4 +29,8 @@ Meteor.publish( 'barTickets', function(barId) {
 
 Meteor.publish( 'me', function() {
   return Meteor.users.find({_id: this.userId}, {services: 0})
+})
+
+Meteor.publish( 'allUsers', function() {
+  return Users.find()
 })

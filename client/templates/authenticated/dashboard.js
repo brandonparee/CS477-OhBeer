@@ -5,6 +5,7 @@ Template.dashboard.onCreated( () => {
 Template.ticketList.onCreated(() => {
   Template.instance().subscribe( 'myMenu', Bars.findOne()._id )
   Template.instance().subscribe( 'barTickets', Bars.findOne()._id )
+  Template.instance().subscribe( 'allUsers' )
 })
 
 Template.ticketList.helpers({
