@@ -12,7 +12,18 @@ let TicketItem = new SimpleSchema({
     type: Number
   },
   'item': {
-    type: String
+    type: String,
+    autoform: {
+      type: "select",
+      options: () => {
+        if (Meteor.isClient) {
+          return MenuItems.find({barId: Meteor.user().bar}).map((item) => {
+            return {label: item.name, value: item._id}
+          })
+
+        }
+      }
+    }
   }
 })
 
