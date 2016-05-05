@@ -13,7 +13,7 @@
     {{#if tickets}}
       {{#each tickets}}
       <div class="col s12 m4">
-        <div class="card-panel white" id="{{_id}}">
+        <div class="card-panel white single-order" id="{{_id}}">
           <div class="avatar">
             {{#with userFromId owner}}
               <img src="{{profile.profilePicture}}" alt="{{emails.[0].address}}" class="circle">

@@ -86,3 +86,19 @@ background: linear-gradient(top, #000000 , #434343); /* W3C, IE 10+/ Edge, Firef
 .inner-padding{
 	padding: 15px;
 }
+
+.single-order{
+	height: 33vh;
+	min-height: 33vh;
+	position: relative;
+	.stage-ticket, .complete-ticket{
+		position: absolute;
+		bottom: 10px;
+		right: 15px;
+	}
+	.reject-ticket{
+		position: absolute;
+		bottom: 10px;
+		left: 15px
+	}
+}
