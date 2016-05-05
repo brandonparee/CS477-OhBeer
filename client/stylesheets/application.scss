@@ -88,8 +88,8 @@ background: linear-gradient(top, #000000 , #434343); /* W3C, IE 10+/ Edge, Firef
 }
 
 .single-order{
-	height: 33vh;
-	min-height: 33vh;
+	height: 55vh;
+	min-height: 55vh;
 	position: relative;
 	.stage-ticket, .complete-ticket{
 		position: absolute;
@@ -101,4 +101,12 @@ background: linear-gradient(top, #000000 , #434343); /* W3C, IE 10+/ Edge, Firef
 		bottom: 10px;
 		left: 15px
 	}
+}
+
+.sm-img{
+	max-height: 100px;
+	padding: 10px 10px 0 10px;
+}
+.med-img{
+	max-height: 125px;
 }

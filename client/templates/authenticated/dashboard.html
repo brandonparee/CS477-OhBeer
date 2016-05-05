@@ -16,7 +16,7 @@
         <div class="card-panel white single-order" id="{{_id}}">
           <div class="avatar">
             {{#with userFromId owner}}
-              <img src="{{profile.profilePicture}}" alt="{{emails.[0].address}}" class="circle">
+              <img src="{{profile.profilePicture}}" alt="{{emails.[0].address}}" class="circle med-img center-block">
               <span class="title"><h5>Order No. {{../orderNum}}</h5></span>
             {{/with}}
           </div>
@@ -46,7 +46,7 @@
                 <div id="completeModal-{{_id}}" class="modal">
                   <div class="modal-content">
                     <h4>Is {{#with userFromId owner}}
-                      <img src="{{profile.profilePicture}}" alt="{{emails.[0].address}}" class="circle">
+                      <img src="{{profile.profilePicture}}" alt="{{emails.[0].address}}" class="circle sm-img">
                       {{/with}} at least 21 years old?
                     </h4>
                   </div>
@@ -60,7 +60,7 @@
               <div id="rejectModal-{{_id}}" class="modal">
                 <div class="modal-content">
                   <h4>Are you sure you want to reject the order from {{#with userFromId owner}}
-                    <img src="{{profile.profilePicture}}" alt="{{emails.[0].address}}" class="circle">
+                    <img src="{{profile.profilePicture}}" alt="{{emails.[0].address}}" class="circle sm-image">
                     {{/with}}?
                   </h4>
                 </div>

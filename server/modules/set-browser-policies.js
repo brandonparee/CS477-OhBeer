@@ -2,6 +2,7 @@ export default function() {
   //BrowserPolicy.content.allowOriginForAll('*');
   BrowserPolicy.content.allowOriginForAll('blob:');
   BrowserPolicy.content.allowOriginForAll('*.amazonaws.com')
+  BrowserPolicy.content.allowOriginForAll('*.imgur.com')
 
 
   BrowserPolicy.content.allowInlineStyles()
